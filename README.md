@@ -26,7 +26,7 @@ $`\displaystyle\hspace{20mm}
 \displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) +
 \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
 \text{(conservation de l'énergie)}\\[2mm] 
-\phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t)\vphantom{\frac{a}{b}} & 
+\phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & 
 \text{(conduction)}\end{array}\right. `$<br>  
 avec les notations suivantes : 
     - $`k`$ la conductivité thermique [J/s/K/m]
@@ -36,7 +36,7 @@ avec les notations suivantes :
     $`\displaystyle\hspace{50mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
-    \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} 
+    \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique}\\[1mm]
     \end{array}\right.`$
 
 1. À l'interface entre deux couches conductrices (nécessairement de 
