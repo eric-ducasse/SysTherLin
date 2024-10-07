@@ -20,15 +20,15 @@ thermique à l'intérieur) est caractérisé par les champs de température
 $`T(r,t)`$ et de densité surfacique de flux de puissance $`\phi(r,t)`$, 
 orienté selon les positions $`r`$ croissantes, vérifiant les équations 
 aux dérivées  partielles linéaires suivantes :<br>
-$`\hspace{20mm}\displaystyle
+$`\displaystyle\hspace{20mm}
 \left\lbrace\begin{array}{llll} 
 \displaystyle\partial_{t}T(r,t) & = & 
-\displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) 
-+ \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
+\displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) +
+\frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
 \text{(conservation de l'énergie)}\\[2mm] 
 \phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & 
-\text{(conduction)}\end{array}\right.
-`$<br> avec les notations suivantes : 
+\text{(conduction)}\end{array}\right. `$<br>  
+avec les notations suivantes : 
     - $`k`$ la conductivité thermique [J/s/K/m]
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
