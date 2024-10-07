@@ -19,27 +19,26 @@ Grâce à la linéarité du système, le calcul, exact, est fait dans le domaine
 thermique à l'intérieur) est caractérisé par les champs de température 
 $`T(r,t)`$ et de densité surfacique de flux de puissance $`\phi(r,t)`$, 
 orienté selon les positions $`r`$ croissantes, vérifiant les équations 
-aux dérivées  partielles linéaires suivantes :
-```math
-\left\lbrace\begin{array}{llll} 
-\displaystyle\partial_{t}T(r,t) & = & 
-\displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) 
-+ \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
-\text{(conservation de l'énergie)}\\[4mm] 
-\phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & 
-\text{(conduction)}\end{array}\right.
-```
-avec les notations suivantes :
-
+aux dérivées  partielles linéaires suivantes :  
+    ```math
+    \left\lbrace\begin{array}{llll} 
+    \displaystyle\partial_{t}T(r,t) & = & 
+    \displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) 
+    + \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
+    \text{(conservation de l'énergie)}\\[2mm] 
+    \phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & 
+    \text{(conduction)}\end{array}\right.
+    ```
+    avec les notations suivantes : 
     - $`k`$ la conductivité thermique [J/s/K/m]
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
     - $`\boldsymbol{m}`$ indicateur de géométrie : 
-    $`\displaystyle\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
+    $\displaystyle\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
     \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} 
-    \end{array}\right.`$
+    \end{array}\right.$
 
 1. À l'interface entre deux couches conductrices (nécessairement de 
 même nature géométrique), on suppose qu'il y a continuité de la 
