@@ -33,10 +33,10 @@ avec les notations suivantes :
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
     - $`\boldsymbol{m}`$ indicateur de géométrie :<br>
-    $`\displaystyle\hspace{50mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
+    $`\displaystyle\hspace{55mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
-    \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique}\\[1mm]
+    \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique}
     \end{array}\right.`$
 
 1. À l'interface entre deux couches conductrices (nécessairement de 
