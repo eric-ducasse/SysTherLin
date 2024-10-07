@@ -30,7 +30,7 @@ avec les notations suivantes :
 
     - Température imposée (type <i>Dirichlet</i>, à l'aide d'un thermostat, difficile à réaliser)
     - Densité surfacique de flux imposée (type <i>Neumann</i>)
-    - Convection (vers un gaz ou un fluide <<~agité~>>): la densité surfacique de flux de puissance thermique est proportionnelle à la différence de températures entre la paroi et le fluide :<br> $\displaystyle\hspace*{5mm}\phi(r,t)=\pm \eta\;\left(T(r,t)-T_{\text{fluide}}(t)\right)$<br>où $\eta$ désigne le <i>coefficient de convection</i> [J/s/K/m²].
+    - Convection (vers un gaz ou un fluide « agité »): la densité surfacique de flux de puissance thermique est proportionnelle à la différence de températures entre la paroi et le fluide :<br> $\displaystyle\hspace{5mm}\phi(r,t)=\pm \eta\;\left(T(r,t)-T_{\text{fluide}}(t)\right)$<br>où $\eta$ désigne le <i>coefficient de convection</i> [J/s/K/m²].
     - Dans le cas particulier d'un multicouche cylindrique ou sphérique plein ($r=0$ sur la frontière gauche du multicouche), il faut rajouter une <i>condition de symétrie</i>,  ce qui est fait automatiquement dans le code.
 <!-- end of the list -->
 
@@ -43,7 +43,7 @@ Une cavité (supposée contenir un gaz ou un fluide « agité ») est caractéri
 - sa capacité calorifique massique $c_p$ [J/K/kg]
 - ses parois, chacune étant le bord d'un multicouche de surface $\mathcal{S}_i$ avec une <u>condition de convection vers la cavité</u>  de coefficient $\eta_i$
 
-L'équation de conservation d'énergie dans chaque cavité s'écrit :<br>$\displaystyle\hspace*{5mm}T_{\text{cavité}}^{\,\prime}(t) = \frac{1}{\rho\,c_p\,\mathcal{V}}\;\sum_{i}\,\mathcal{S}_i\,\varphi_{i}(t)\quad\text{avec}\quad \varphi_{i}(t)=\eta_{i}\left(T_i(t)-T_{\text{cavité}}(t)\right)\,\text{,}$<br>la température $T_i(t)$ de la paroi $i$ étant supposée uniforme.
+L'équation de conservation d'énergie dans chaque cavité s'écrit :<br>$\displaystyle\hspace{5mm}T_{\text{cavité}}^{\,\prime}(t) = \frac{1}{\rho\,c_p\,\mathcal{V}}\;\sum_{i}\,\mathcal{S}_i\,\varphi_{i}(t)\quad\text{avec}\quad \varphi_{i}(t)=\eta_{i}\left(T_i(t)-T_{\text{cavité}}(t)\right)\,\text{,}$<br>la température $T_i(t)$ de la paroi $i$ étant supposée uniforme.
 
 ### <span style="color:#0000FF"> <b>Utilisation du code</b></span>
 
