@@ -19,7 +19,7 @@ Grâce à la linéarité du système, le calcul, exact, est fait dans le domaine
 thermique à l'intérieur) est caractérisé par les champs de température 
 $`T(r,t)`$ et de densité surfacique de flux de puissance $`\phi(r,t)`$, 
 orienté selon les positions $`r`$ croissantes, vérifiant les équations 
-aux dérivées  partielles linéaires suivantes :<br>
+aux dérivées  partielles linéaires suivantes :<br><br>
 $`\displaystyle\hspace{20mm}
 \left\lbrace\begin{array}{llll} 
 \displaystyle\partial_{t}T(r,t) & = & 
@@ -32,7 +32,7 @@ avec les notations suivantes :
     - $`k`$ la conductivité thermique [J/s/K/m]
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
-    - $`\boldsymbol{m}`$ indicateur de géométrie :<br>
+    - $`\boldsymbol{m}`$ indicateur de géométrie :<br><br>
     $`\displaystyle\hspace{20mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
