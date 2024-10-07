@@ -33,12 +33,12 @@ aux dérivées  partielles linéaires suivantes :
     - $`k`$ la conductivité thermique [J/s/K/m]
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
-    - $`\boldsymbol{m}`$ indicateur de géométrie : 
-    $$`\displaystyle\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
+    - $`\boldsymbol{m}`$ indicateur de géométrie :<br>
+    $`\displaystyle\hspace{20mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
     \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} 
-    \end{array}\right.`$$
+    \end{array}\right.`$
 
 1. À l'interface entre deux couches conductrices (nécessairement de 
 même nature géométrique), on suppose qu'il y a continuité de la 
