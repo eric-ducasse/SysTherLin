@@ -15,11 +15,15 @@ Grâce à la linéarité du système, le calcul, exact, est fait dans le domaine
 
 ### <span style="color:#0000FF"> <b>Modélisation d'un muticouche 1D conducteur</b></span>
 
-1. L'état d'une couche conductrice (supposée homogène et sans source thermique à l'intérieur) est caractérisé par les champs de température $T(r,t)$ et de densité surfacique de flux de puissance $\phi(r,t)$, orienté selon les positions $r$ croissantes, vérifiant les équations aux dérivées  partielles linéaires suivantes :<br> $\displaystyle\hspace*{5mm}\left\lbrace\begin{array}{llll} \displaystyle\partial_{t}T(r,t) & = & \displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) + \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & \text{(conservation de l'énergie)}\\[4mm] \phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & \text{(conduction)}\end{array}\right.$ avec les notations suivantes :
+1. L'état d'une couche conductrice (supposée homogène et sans source thermique à l'intérieur) est caractérisé par les champs de température $T(r,t)$ et de densité surfacique de flux de puissance $\phi(r,t)$, orienté selon les positions $r$ croissantes, vérifiant les équations aux dérivées  partielles linéaires suivantes :
+$\displaystyle\hspace{5mm}\left\lbrace\begin{array}{llll} \displaystyle\partial_{t}T(r,t) & = & \displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) + \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & \text{(conservation de l'énergie)}\\ \phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & \text{(conduction)}\end{array}\right.$
+avec les notations suivantes :
+
     - $k$ la conductivité thermique [J/s/K/m]
     - $\rho$ la masse volumique [kg/m³]
     - $c_p$ la capacité thermique massique [J/K/kg]
-    - $\boldsymbol{m}$ indicateur de géométrie : $\displaystyle\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & \text{couche plane}\\[0.5mm]\boldsymbol{m}=1\text{ :} & \text{couche à symétrie cylindrique}\\[0.5mm]\boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} \end{array}\right.$
+    - $\boldsymbol{m}$ indicateur de géométrie : 
+    $\displaystyle\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & \text{couche à symétrie cylindrique}\\ \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} \end{array}\right.$
 
 1. À l'interface entre deux couches conductrices (nécessairement de même nature géométrique), on suppose qu'il y a continuité de la température et du flux (pas de résistance thermique de contact).
 1. Les conditions limites au bord d'un multicouche peuvent être de 3 sortes :
