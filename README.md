@@ -26,14 +26,14 @@ $`\displaystyle\hspace{20mm}
 \displaystyle \frac{-1}{\rho\,c_p}\,\left(\partial_{r}\phi(r,t) +
 \frac{\boldsymbol{m}}{r}\;\phi(r,t)\right) & 
 \text{(conservation de l'énergie)}\\[2mm] 
-\phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t) & 
+\phi(r,t) & = & \displaystyle-k\,\partial_{r}T(r,t)\vphantom{\frac{a}{b}} & 
 \text{(conduction)}\end{array}\right. `$<br>  
 avec les notations suivantes : 
     - $`k`$ la conductivité thermique [J/s/K/m]
     - $`\rho`$ la masse volumique [kg/m³]
     - $`c_p`$ la capacité thermique massique [J/K/kg]
-    - $`\boldsymbol{m}`$ indicateur de géométrie :<br><br>
-    $`\displaystyle\hspace{20mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
+    - $`\boldsymbol{m}`$ indicateur de géométrie :<br>
+    $`\displaystyle\hspace{50mm}\left|\begin{array}{ll} \boldsymbol{m}=0\text{ :} & 
     \text{couche plane}\\ \boldsymbol{m}=1\text{ :} & 
     \text{couche à symétrie cylindrique}\\ 
     \boldsymbol{m}=2\text{ :} & \text{couche à symétrie sphérique} 
