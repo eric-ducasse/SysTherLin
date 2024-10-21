@@ -1,0 +1,46 @@
+﻿++++++++++++++++++++++++++++++++++
+Version 1.0 : 9 novembre 2018
+++++++++++++++++++++++++++++++++++
+Version 1.1 : 6 décembre 2018
+Bogue détecté : problème pour un cylindre plein (en r=0)
+Signalement : Quentin Crancee
+Cylindre plein sans cavité : OK (essai4 rajouté)
+Cylindre plein avec cavité : K0 (essai5 rajouté)
+Diagnostic : appel de Multicouche.TLsig injustifié dans
+   SystemeThermiqueLineaire.calculer_maintenant au centre du
+   cylindre.
+Solution apportée : Test à rajouter pour traiter ce cas
+++++++++++++++++++++++++++++++++++
+Version 1.2 : 14 avril 2020
+Possibilité de définir la température initiale de chaque élément rajoutée
+++++++++++++++++++++++++++++++++++
+Version 1.21 : 16 avril 2020
+Bogues corrigés ; documentation et exemples actualisés
+++++++++++++++++++++++++++++++++++
+Version 1.22 : 22 avril 2020
+Modification du constructeur de SystemeThermiqueLineaire :
+    Par défaut, le calcul ne se fait plus. Rajouter l'option
+    « Calculer=True » pour que le calcul se fasse tout de suite
+    (cela revient à lancer la méthode calculer_maintenant).
+Bogues corrigés : des températures initiales différentes dans un 
+multicouche en contact avec une ou plusieur cavités sont maintenant
+correctement traitées.
+++++++++++++++++++++++++++++++++++
+Version 1.23 : 16 mai 2020
+Bogues corrigés : des températures initiales différentes dans un 
+multicouche en contact plusieur cavités sont maintenant vraiment
+correctement traitées.
+++++++++++++++++++++++++++++++++++
+Version 1.24 : 29 octobre 2020
+Constantes de temps pour les couches cylindriques et sphériques ajoutées
+++++++++++++++++++++++++++++++++++
+Version 1.25 : 20 novembre 2020
+Méthode copy rajoutée aux 3 classes de couches
+++++++++++++++++++++++++++++++++++
+Version 1.30 : 6 octobre 2024
+Introduction des indications de typage : voir préconisations de PEP 484
+https://peps.python.org/pep-0484/
+https://docs.python.org/3.10/library/typing.html
+properties Multicouche.positiveTimeValues et SystemeThermiqueLineaire.positiveTimeValues ajoutées.
+++++++++++++++++++++++++++++++++++
+
