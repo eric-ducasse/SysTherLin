@@ -1,4 +1,4 @@
-# Version 1.30 - 2024, October, 6
+# Version 1.31 - 2024, November, 3rd
 # Project : SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
@@ -286,16 +286,18 @@ class SystemeThermiqueLineaire :
                                 # les cavités, à calculer
             if calculer : self.calculer_maintenant()
     #-------------------------------------------------------------------
-    def calculer_maintenant(self, verbose=False) -> None:
+    def calculer_maintenant(self, verbose=False, quiet=False) -> None:
         """Calcule la solution, si cela est possible."""
+        if quiet : prt_q = lambda *p:None
+        else : prt_q = print
         if verbose: prt = print
         else: prt = lambda *p:None
-        print("SystemeThermiqueLineaire.calculer_maintenant...")
+        prt_q("SystemeThermiqueLineaire.calculer_maintenant...")
         if self.__type == "un seul multicouche" :
             MC = self.__LMC[0]
             prt("+++ Multicouche 1 :")
             if MC.tout_est_defini() :                
-                print("... Calcul déjà effectué.")
+                prt_q("... Calcul déjà effectué.")
                 # tout est déjà calculé dans le multicouche
         elif self.__type == "une seule cavité" :
             s,bornes = self.__s,self.__bornes
@@ -354,7 +356,7 @@ class SystemeThermiqueLineaire :
                 for mc,d,f in zip(CAV.parois,bornes[:-1],bornes[1:]) :
                     mc.set_AB(V_AB[:,d:f])            
                 self.__T_cav = [CAV.Tinit + mc.TLrec(V_AB[:,-1])]
-                print("... Calcul effectué.")
+                prt_q("... Calcul effectué.")
         elif self.__type == "plusieurs cavités" :
             s,bornes = self.__s,self.__bornes
             ns,dm = len(s),self.__dim
@@ -407,7 +409,7 @@ class SystemeThermiqueLineaire :
             #       sauts internes de températures initiales
             for i,mc in enumerate(self.__LMC,1) :
                 # Différents multicouches
-                print(f"Sauts de températures dans le multicouche {i}")
+                prt_q(f"Sauts de températures dans le multicouche {i}")
                 no = mc.numero
                 d = bornes[no]
                 TinitL = mc.couches[0].Tinit
@@ -427,7 +429,7 @@ class SystemeThermiqueLineaire :
                 # Températures dans les cavités
                 self.__T_cav = [cav.Tinit + mc.TLrec(V_AB[:,-d])
                                 for d,cav in enumerate(self.__LCAV, 1)]
-                print("... Calcul effectué.")
+                prt_q("... Calcul effectué.")
         else :
             print("SystemeThermiqueLineaire.calculer_maintenant ::"
                   + f"Type de système '{self.__type}' inconnu!")

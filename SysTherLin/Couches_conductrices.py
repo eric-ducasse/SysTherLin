@@ -1,4 +1,4 @@
-# Version 1.30 - 2024, October, 6
+# Version 1.31 - 2024, November, 3rd
 # Project: SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
