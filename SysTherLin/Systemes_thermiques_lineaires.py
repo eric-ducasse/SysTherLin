@@ -1,4 +1,4 @@
-# Version 1.31 - 2024, November, 3rd
+# Version 1.32 - 2025, May, 12
 # Project : SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
@@ -114,9 +114,9 @@ class Cavite :
             unitVol = "mm³"
         
         for nom,val,u in [
-                ["Volume",volume,unitVol],
-                ["Masse volumique",self.rho,"kg/m^3"],
-                ["Capacité calorique",self.Cp,"J/K/kg"] ]:
+                ["Volume", volume,unitVol],
+                ["Masse volumique", self.rho, "kg/m³"],
+                ["Capacité calorifique", self.Cp, "J/K/kg"] ]:
             msg += f"\n\t{nom} : {val:.2f} {u}"
         msg += ("\n\tTempérature initiale : "
                 + f"{self.Tinit:.2f} °C")

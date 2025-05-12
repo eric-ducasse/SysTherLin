@@ -1,4 +1,4 @@
-# Version 1.31 - 2024, November, 3rd
+# Version 1.32 - 2025, May, 12
 # Project: SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
@@ -62,7 +62,7 @@ class CoucheConductrice:
     def e(self) -> float: return self.__e
     @property
     def tau(self) -> float:
-        """Constante de temps [s] : e^2/(2*alpha)"""
+        """Constante de temps [s] : e²/(2*alpha)"""
         return 0.5*self.un_sur_alpha*self.e**2
     @property
     def delta_T_initial(self) -> float:
@@ -78,7 +78,7 @@ class CoucheConductrice:
         for nom,val,u in [
                 ["Conductivité", self.k, "W/K/m"],
                 ["Masse volumique", self.rho, "kg/m³"],
-                ["Capacité calorique", self.Cp, "J/K/kg"],
+                ["Capacité calorifique", self.Cp, "J/K/kg"],
                 ["Épaisseur", 1000*self.e, "mm"],
                 ["Constante de temps", self.tau, "s"]]:
             msg += f"\n\t{nom} : {val:.2f} {u}"
@@ -152,7 +152,7 @@ class CoucheConductriceCylindrique(CoucheConductrice):
         for nom,val,u in [
                 ["Conductivité", self.k, "W/K/m"],
                 ["Masse volumique", self.rho, "kg/m³"],
-                ["Capacité calorique", self.Cp, "J/K/kg"],
+                ["Capacité calorifique", self.Cp, "J/K/kg"],
                 ["Épaisseur", 1000*self.e, "mm"],
                 ["Rayon intérieur", 1000*self.Rmin, "mm"],
                 ["Rayon extérieur", 1000*self.Rmax, "mm"],
@@ -230,7 +230,7 @@ class CoucheConductriceSpherique(CoucheConductrice):
         for nom,val,u in [
                 ["Conductivité", self.k, "W/K/m"],
                 ["Masse volumique", self.rho, "kg/m³"],
-                ["Capacité calorique", self.Cp, "J/K/kg"],
+                ["Capacité calorifique", self.Cp, "J/K/kg"],
                 ["Épaisseur", 1000*self.e, "mm"],
                 ["Rayon intérieur", 1000*self.Rmin, "mm"],
                 ["Rayon extérieur", 1000*self.Rmax, "mm"],
