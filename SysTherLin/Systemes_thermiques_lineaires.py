@@ -1,4 +1,4 @@
-# Version 1.32 - 2025, May, 12
+# Version 1.33 - 2025, May, 14
 # Project : SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
@@ -352,7 +352,12 @@ class SystemeThermiqueLineaire :
                 prt("\tOK")
             big_M[:,-1,-1] = -1.0
             if OK :
-                V_AB = solve(big_M,big_V)
+                try : # numpy 1.x
+                    V_AB = solve(big_M,big_V)
+                except : # numpy 2.x
+                    big_V.shape = big_V.shape + (1,)
+                    V_AB = solve(big_M,big_V)
+                    V_AB.shape = V_AB.shape[:-1]
                 for mc,d,f in zip(CAV.parois,bornes[:-1],bornes[1:]) :
                     mc.set_AB(V_AB[:,d:f])            
                 self.__T_cav = [CAV.Tinit + mc.TLrec(V_AB[:,-1])]
@@ -421,7 +426,13 @@ class SystemeThermiqueLineaire :
             if OK :
                 self.big_M = big_M
                 self.big_V = big_V
-                V_AB = solve(big_M,big_V) # Résolution du système
+                # résolution du systeme
+                try : # numpy 1.x
+                    V_AB = solve(big_M,big_V)
+                except : # numpy 2.x
+                    big_V.shape = big_V.shape + (1,)
+                    V_AB = solve(big_M,big_V)
+                    V_AB.shape = V_AB.shape[:-1]
                 for mc in self.__LMC : # Différents multicouches
                     no = mc.numero
                     d,f = bornes[no:no+2]

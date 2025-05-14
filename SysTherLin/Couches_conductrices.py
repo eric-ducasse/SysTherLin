@@ -1,4 +1,4 @@
-# Version 1.32 - 2025, May, 12
+# Version 1.33 - 2025, May, 14
 # Project: SysTherLin (Systèmes thermiques linéaires)
 # Copyright (Eric Ducasse 2018)
 # Licensed under the EUPL-1.2 or later
@@ -682,7 +682,12 @@ class Multicouche:
         # Côté droit
         S[:,-1] = self.__VD
         # Résolution
-        self.__AB = solve(M,S)
+        try : # numpy 1.x
+            self.__AB = solve(M,S)
+        except : # numpy 2.x
+            S.shape = S.shape + (1,)
+            self.__AB = solve(M,S)
+            self.__AB.shape = self.__AB.shape[:-1]
         return 
     #-------------------------------------------------------------------
     def set_AB(self, new_AB: TABCPX ) -> None:
@@ -876,7 +881,7 @@ MC = Multicouche
 ##################### TESTS ÉLÉMENTAIRES ###############################
 if __name__ == "__main__":
     #++++++++++++++++++++++++
-    choix: int = 4 # 1,2,3,4
+    choix: int = 3 # 1,2,3,4
     #++++++++++++++++++++++++
     nb: int
     C: MC
